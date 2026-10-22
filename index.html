@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover extraordinary destinations, beautiful stays and unforgettable experiences with Wanderly.">
+    <meta name="theme-color" content="#ffffff">
+    <title>Wanderly — Find Your Somewhere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="announcement">
+        YOUR NEXT ADVENTURE IS CLOSER THAN YOU THINK <span>✦</span>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#home" class="logo" aria-label="Wanderly home">
+                <span class="logo-mark">✳</span>
+                <span>wanderly<span class="logo-dot">.</span></span>
+            </a>
+
+            <form class="header-search" id="headerSearch" role="search">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input type="search" id="headerQuery" placeholder="Where do you want to go?" aria-label="Search destinations">
+                <button type="submit">Search <span>↗</span></button>
+            </form>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#destinations">Discover</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#stories">Travel stories</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-button" id="headerFavorites" type="button" aria-label="View favorites" title="View favorites">♡</button>
+                <a class="signin-button" href="#signin" id="signInButton">Sign in <span>↗</span></a>
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="secondary-nav" aria-label="Explore categories">
+            <div class="secondary-inner">
+                <a href="#experiences">♧ Things to do</a>
+                <a href="#destinations">▤ Destinations</a>
+                <a href="#stays">⌂ Stays</a>
+                <a href="#deals">✦ Featured trips</a>
+                <a href="#experiences" data-category-link="Food">♨ Restaurants</a>
+                <a href="#stories">▧ Travel stories</a>
+            </div>
+        </nav>
+
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+            <a href="#destinations">Discover destinations</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#stays">Stays</a>
+            <a href="#deals">Featured trips</a>
+            <a href="#stories">Travel stories</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
+            <span class="hero-sparkle sparkle-two" aria-hidden="true">✳</span>
+
+            <div class="hero-content">
+                <p class="eyebrow"><span></span> YOUR NEXT ADVENTURE STARTS HERE <span></span></p>
+                <h1>Somewhere <em>beautiful</em> is<br class="desktop-break"> calling.</h1>
+                <p class="hero-description">
+                    Discover extraordinary places, unforgettable stays, and little
+                    moments that become your favourite memories.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#destinations" class="button button-primary">Find your somewhere <span>↗</span></a>
+                    <a href="#experiences" class="button button-secondary">Explore experiences <span>↓</span></a>
+                </div>
+            </div>
+
+            <div class="search-panel" id="discover">
+                <div class="search-panel-heading">
+                    <div>
+                        <span class="mini-label">LET THE JOURNEY BEGIN</span>
+                        <h2>Where to next?</h2>
+                    </div>
+                    <span class="search-sparkle" aria-hidden="true">✳</span>
+                </div>
+
+                <form class="destination-search" id="destinationSearch">
+                    <label class="destination-field">
+                        <span class="field-icon" aria-hidden="true">⌕</span>
+                        <span class="field-content">
+                            <span class="field-label">Destination</span>
+                            <input id="destinationQuery" type="search" placeholder="Explore places, cities, countries..." aria-label="Enter a destination">
+                        </span>
+                    </label>
+
+                    <label class="destination-field date-field">
+                        <span class="field-icon" aria-hidden="true">▦</span>
+                        <span class="field-content">
+                            <span class="field-label">When</span>
+                            <input id="travelDate" type="date" aria-label="Travel date">
+                        </span>
+                    </label>
+
+                    <label class="destination-field">
+                        <span class="field-icon" aria-hidden="true">♙</span>
+                        <span class="field-content">
+                            <span class="field-label">Travellers</span>
+                            <select id="travellerCount" aria-label="Number of travellers">
+                                <option value="1">1 traveller</option>
+                                <option value="2" selected>2 travellers</option>
+                                <option value="3">3 travellers</option>
+                                <option value="4">4 travellers</option>
+                                <option value="5">5+ travellers</option>
+                            </select>
+                        </span>
+                    </label>
+
+                    <button class="search-submit" type="submit">Search trips <span>↗</span></button>
+                </form>
+                <p class="search-note">No fixed plans? No problem. Let curiosity lead the way.</p>
+            </div>
+        </section>
+
+        <section class="section experiences-section" id="experiences">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow-left">EXPLORE YOUR WAY</p>
+                    <h2>Find what moves you<span class="heading-dot">.</span></h2>
+                    <p class="section-description">Different moods. Different places. Your kind of adventure.</p>
+                </div>
+                <a class="text-link" href="#destinations">Explore all <span>↗</span></a>
+            </div>
+
+            <div class="interest-grid">
+                <a class="interest-card" href="#destinations" data-category="Outdoors">
+                    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85" alt="Wild mountain scenery" loading="lazy">
+                    <span class="interest-number">01 / NATURE</span>
+                    <div class="interest-overlay"><span class="interest-icon">↗</span><h3>Outdoors</h3><p>Find your wild side</p></div>
+                </a>
+                <a class="interest-card" href="#destinations" data-category="Food">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="Fresh colourful food" loading="lazy">
+                    <span class="interest-number">02 / FLAVOUR</span>
+                    <div class="interest-overlay"><span class="interest-icon">↗</span><h3>Food</h3><p>Follow your appetite</p></div>
+                </a>
+                <a class="interest-card" href="#destinations" data-category="Culture">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1000&q=85" alt="Historic city architecture" loading="lazy">
+                    <span class="interest-number">03 / DISCOVERY</span>
+                    <div class="interest-overlay"><span class="interest-icon">↗</span><h3>Culture</h3><p>Get to know somewhere new</p></div>
+                </a>
+                <a class="interest-card" href="#destinations" data-category="Water">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85" alt="Ocean waves along the coast" loading="lazy">
+                    <span class="interest-number">04 / ESCAPE</span>
+                    <div class="interest-overlay"><span class="interest-icon">↗</span><h3>Water</h3><p>Go where the waves take you</p></div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section destinations-section" id="destinations">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow-left">THE WORLD, WAITING</p>
+                    <h2>Places worth the journey<span class="heading-dot">.</span></h2>
+                    <p class="section-description">A few places that might just steal your heart.</p>
+                </div>
+                <a class="text-link" href="#trip-planner">Plan a trip <span>↗</span></a>
+            </div>
+
+            <div class="filter-bar" aria-label="Filter destinations">
+                <button class="filter-button active" data-filter="All" aria-pressed="true">All places</button>
+                <button class="filter-button" data-filter="Outdoors" aria-pressed="false">Nature</button>
+                <button class="filter-button" data-filter="Culture" aria-pressed="false">Culture</button>
+                <button class="filter-button" data-filter="Water" aria-pressed="false">Beach &amp; water</button>
+                <button class="filter-button" data-filter="Food" aria-pressed="false">Food</button>
+            </div>
+
+            <div class="destination-grid" id="destinationGrid">
+                <article class="destination-card" data-category="Water" data-name="Bali Indonesia">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Tropical Bali landscape" loading="lazy">
+                        <span class="image-tag">TRAVELLER FAVOURITE</span>
+                        <button class="favorite-button" type="button" aria-label="Add Bali to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Bali</h3><p>Indonesia · Southeast Asia</p></div><span class="rating">★ 4.9</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹24,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to Bali">↗</a></div>
+                    </div>
+                </article>
+
+                <article class="destination-card" data-category="Culture" data-name="Kyoto Japan">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=85" alt="Traditional Kyoto architecture" loading="lazy">
+                        <span class="image-tag">CULTURE &amp; CALM</span>
+                        <button class="favorite-button" type="button" aria-label="Add Kyoto to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Kyoto</h3><p>Japan · East Asia</p></div><span class="rating">★ 4.8</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹42,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to Kyoto">↗</a></div>
+                    </div>
+                </article>
+
+                <article class="destination-card" data-category="Outdoors" data-name="Swiss Alps Switzerland">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=900&q=85" alt="Alpine mountains in Switzerland" loading="lazy">
+                        <span class="image-tag">MOUNTAIN ESCAPE</span>
+                        <button class="favorite-button" type="button" aria-label="Add Swiss Alps to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Swiss Alps</h3><p>Switzerland · Europe</p></div><span class="rating">★ 4.9</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹54,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to the Swiss Alps">↗</a></div>
+                    </div>
+                </article>
+
+                <article class="destination-card" data-category="Water" data-name="Phuket Thailand">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Sunny tropical beach" loading="lazy">
+                        <span class="image-tag">SUN &amp; SEA</span>
+                        <button class="favorite-button" type="button" aria-label="Add Phuket to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Phuket</h3><p>Thailand · Southeast Asia</p></div><span class="rating">★ 4.7</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹19,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to Phuket">↗</a></div>
+                    </div>
+                </article>
+
+                <article class="destination-card" data-category="Food" data-name="Istanbul Turkey">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=85" alt="Historic Istanbul skyline" loading="lazy">
+                        <span class="image-tag">FLAVOURS &amp; HISTORY</span>
+                        <button class="favorite-button" type="button" aria-label="Add Istanbul to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Istanbul</h3><p>Türkiye · Europe &amp; Asia</p></div><span class="rating">★ 4.8</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹29,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to Istanbul">↗</a></div>
+                    </div>
+                </article>
+
+                <article class="destination-card" data-category="Outdoors" data-name="Queenstown New Zealand">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Dramatic mountain peaks" loading="lazy">
+                        <span class="image-tag">ADVENTURE AWAITS</span>
+                        <button class="favorite-button" type="button" aria-label="Add Queenstown to favorites" aria-pressed="false">♡</button>
+                    </div>
+                    <div class="destination-info">
+                        <div class="destination-title-row"><div><h3>Queenstown</h3><p>New Zealand · Oceania</p></div><span class="rating">★ 4.9</span></div>
+                        <div class="destination-bottom"><span><span class="price-label">From</span> ₹64,999 <span class="price-unit">/ person</span></span><a href="#trip-planner" class="card-arrow" aria-label="Plan a trip to Queenstown">↗</a></div>
+                    </div>
+                </article>
+            </div>
+
+            <p class="empty-state" id="emptyState" hidden>No destinations match your search. Try another place or category.</p>
+            <div class="center-action"><button class="button button-outline" id="showAllButton" type="button">Show all destinations <span>↗</span></button></div>
+            <p class="demo-disclaimer">Illustrative destinations and estimated starting prices. Actual travel prices vary by dates, availability and provider.</p>
+        </section>
+
+        <section class="stay-feature section" id="stays">
+            <div class="stay-image">
+                <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=85" alt="Peaceful boutique accommodation surrounded by nature" loading="lazy">
+                <span class="stay-image-caption">STAY SOMEWHERE SPECIAL</span>
+            </div>
+            <div class="stay-content">
+                <p class="eyebrow eyebrow-left">NOT JUST A PLACE TO SLEEP</p>
+                <h2>Make the stay<br>part of the story<span class="heading-dot">.</span></h2>
+                <p>Wake up to mountain views, find a little seaside hideaway, or settle into a home that feels like it has always been yours.</p>
+                <ul class="stay-points">
+                    <li><span>✳</span> Character-filled places</li>
+                    <li><span>✳</span> Thoughtful details</li>
+                    <li><span>✳</span> Memories worth keeping</li>
+                </ul>
+                <a href="#trip-planner" class="button button-primary">Find your kind of stay <span>↗</span></a>
+            </div>
+        </section>
+
+        <section class="section featured-section" id="deals">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow-left">A LITTLE INSPIRATION</p>
+                    <h2>Trips to dream about<span class="heading-dot">.</span></h2>
+                    <p class="section-description">A few ideas for your next great escape.</p>
+                </div>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85" alt="Bali tropical landscape" loading="lazy">
+                    <div class="featured-card-content"><span>ISLAND RESET</span><h3>Slow days in Bali</h3><p>Rice terraces, ocean air and room to unwind.</p><a href="#trip-planner" class="text-link">Explore the idea ↗</a></div>
+                </article>
+                <article class="featured-card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=85" alt="Kyoto streets and traditional buildings" loading="lazy">
+                    <div class="featured-card-content"><span>CULTURE ESCAPE</span><h3>A moment in Kyoto</h3><p>Quiet lanes, beautiful gardens and local flavours.</p><a href="#trip-planner" class="text-link">Explore the idea ↗</a></div>
+                </article>
+                <article class="featured-card">
+                    <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1000&q=85" alt="Swiss mountain landscape" loading="lazy">
+                    <div class="featured-card-content"><span>MOUNTAIN AIR</span><h3>Into the Swiss Alps</h3><p>Fresh air, scenic trails and unforgettable views.</p><a href="#trip-planner" class="text-link">Explore the idea ↗</a></div>
+                </article>
+            </div>
+            <p class="demo-disclaimer">These are illustrative trip ideas, not live deals or bookable offers.</p>
+        </section>
+
+        <section class="planner-section" id="trip-planner">
+            <div class="planner-copy">
+                <p class="eyebrow">YOUR NEXT CHAPTER</p>
+                <h2>A good trip starts with a little curiosity.</h2>
+                <p>Choose a place, pick a date and let the planning begin.</p>
+            </div>
+            <a class="button button-light" href="#discover">Start planning <span>↗</span></a>
+        </section>
+
+        <section class="section stories-section" id="stories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow eyebrow-left">NOTES FROM THE ROAD</p>
+                    <h2>Stories that make you wander<span class="heading-dot">.</span></h2>
+                    <p class="section-description">Little reminders that the world is full of wonder.</p>
+                </div>
+            </div>
+            <div class="stories-grid">
+                <article class="story-card">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85" alt="Lake surrounded by mountains" loading="lazy">
+                    <div><span>FIELD NOTES · 5 MIN READ</span><h3>Take the scenic route</h3><p>Sometimes the best part of travelling is the journey between places.</p></div>
+                </article>
+                <article class="story-card">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Sunlight over a beautiful landscape" loading="lazy">
+                    <div><span>TRAVEL THOUGHTS · 4 MIN READ</span><h3>Leave room for the unexpected</h3><p>Make a plan, then leave a little space for the magic.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter-section" id="newsletter">
+            <div><p class="eyebrow">A POSTCARD FROM WANDERLY</p><h2>Keep a little wanderlust handy.</h2><p>Save the places you love and collect inspiration for your next escape.</p></div>
+            <form class="newsletter-form" id="newsletterForm">
+                <label class="visually-hidden" for="newsletterEmail">Email address</label>
+                <input id="newsletterEmail" type="email" placeholder="Your email address" required>
+                <button type="submit">Join Wanderly <span>↗</span></button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#home" class="logo footer-logo"><span class="logo-mark">✳</span><span>wanderly<span class="logo-dot">.</span></span></a>
+                <p>For the places that stay with you long after you've left.</p>
+            </div>
+            <div class="footer-column"><h3>Explore</h3><a href="#destinations">Destinations</a><a href="#experiences">Experiences</a><a href="#stays">Stays</a><a href="#stories">Travel stories</a></div>
+            <div class="footer-column"><h3>Wanderly</h3><a href="#discover">Discover</a><a href="#trip-planner">Plan a trip</a><a href="#newsletter">Join our community</a></div>
+            <div class="footer-note"><span>✳ A NOTE TO YOUR FUTURE SELF</span><p>The world is bigger than your to-do list. Go see a little more of it.</p><a href="#home">Back to the beginning ↑</a></div>
+        </div>
+        <div class="footer-bottom"><p>© <span id="currentYear">2026</span> Wanderly Travel. Find your somewhere.</p><p>Made for the curious <span>✳</span></p></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
