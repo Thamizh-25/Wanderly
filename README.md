@@ -2,6 +2,15 @@
 
 **Wanderly** is a responsive travel discovery website designed to help users explore destinations, discover places to stay, find restaurants, and browse exciting travel experiences through a clean and user-friendly interface.
 
+## 🌐 Live Demo
+
+**Explore Wanderly here:** [Visit Wanderly](https://thamizh-25.github.io/Wanderly/)
+
+## 📂 GitHub Repository
+
+[View source code on GitHub](https://github.com/Thamizh-25/Wanderly)
+
+
 ## ✨ Features
 
 - 🧭 **Navigation Bar** — Easy access to the main sections of the website.
