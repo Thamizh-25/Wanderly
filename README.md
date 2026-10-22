@@ -101,6 +101,17 @@ GitHub: [@Thamizh-25](https://github.com/Thamizh-25)
 ## 📄 License
 
 This project is developed for educational and portfolio purposes. Add an open-source license if you intend to distribute it under specific reuse terms.
+## 📸 Project Screenshots
+
+### 🏠 Homepage
+![Wanderly Homepage](screenshots/homepage.png)
+
+### 🌍 Destinations and Listings
+![Wanderly Destinations](screenshots/destinations.png)
+
+### 📱 Mobile Responsive View
+![Wanderly Mobile View](screenshots/mobile-view.png)
+
 
 ---
 
