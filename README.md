@@ -106,11 +106,23 @@ This project is developed for educational and portfolio purposes. Add an open-so
 ### 🏠 Homepage
 ![Wanderly Homepage](screenshots/homepage.png)
 
-### 🌍 Destinations and Listings
-![Wanderly Destinations](screenshots/destinations.png)
+### 🌍 Explore Destinations
+![Explore Destinations](screenshots/explorepage.png)
 
-### 📱 Mobile Responsive View
-![Wanderly Mobile View](screenshots/mobile-view.png)
+### 📍 Places and Listings
+![Places and Listings](screenshots/places.png)
+
+### ✈️ Trips and Experiences
+![Trips and Experiences](screenshots/trips.png)
+
+### 🎯 Promotional Section
+![Promotional Section](screenshots/ad.png)
+
+### 🌐 Travel Inspiration
+![Travel Inspiration](screenshots/world.png)
+
+### 👣 Footer
+![Wanderly Footer](screenshots/footer.png)
 
 
 ---
